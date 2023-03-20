@@ -11,4 +11,3 @@ while True or False:
     if a == 0 or b == 0:
         break
 print(f'НОД :{a,b}')
-print('что за хрень просиходит ')
