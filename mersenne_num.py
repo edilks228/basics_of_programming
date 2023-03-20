@@ -13,3 +13,4 @@ if i > mersenne // 2:
     print(f'число {mersenne} простое')
 else:
     print(f'число {i} первый делитель числа {mersenne}')
+#2
