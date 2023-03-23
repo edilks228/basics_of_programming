@@ -1,6 +1,6 @@
 a,b = map(int,input('введите числа >0 через пробел: ').split())
 while True:
-    if a>b:
+    if a > b:
         a = a % b
     else:
         b = b % a
