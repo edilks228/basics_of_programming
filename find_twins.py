@@ -14,16 +14,16 @@ def init (t,v,w:int,x:MyArray):
     i = 1
     for i in range(t):
         x[i] = v + randint(0,w)
-def Solve(qx, qy:int,qz:int, X,Y:MyArray, Z:MyArray):
+def Solve(qx, qy:int,qz:int, X:MyArray,Y:MyArray, Z:MyArray):
     i =1
     j = 1
-    qz = 0
+    # qz = 0
     for i in range(qx):
         for j in range(qy):
             if X[i] == Y[j]:
-                qz = qz+1
+                # qz = qz+1
                 Z[qz] = X[i]
-
+                qz = qz + 1
 
 init(n, la, ha, A)
 print('вывод значений элементов массива A')
