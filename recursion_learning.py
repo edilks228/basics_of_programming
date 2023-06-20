@@ -66,10 +66,10 @@ def Search_Max(n,x):
 
 # reverse number
 # n = int(input(''))
-def Solve():
-    if n!=0:
-        Solve()
-        return print(n/5)
+# def Solve():
+#     if n!=0:
+#         Solve()
+#         return print(n/5)
 # print(Solve())
 
 # Fibonachi number
@@ -83,10 +83,11 @@ print(Fib(6))
 
 # finding the sum of the first terms of an arithmetic progression
 
-def Sa(n,a,d):
+def Sa(n,a,e):
     if n>0:
-        return a+Sa(n-1, a+d)
+        val = a+Sa(n-1, e+a)
+        return val
     else:
         return 0
 
-print(Sa(5,1,1))
+a = Sa(5,3,4)
