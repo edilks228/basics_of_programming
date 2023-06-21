@@ -23,7 +23,7 @@ def check_brackets(string):
     else:
         return True
 
-print(check_brackets('i (cAn) not (be) your supermAn'))
+print(check_brackets('i )cAn not (be your supermAn'))
 
 #№3 count quantity of vowels letters in string
 
