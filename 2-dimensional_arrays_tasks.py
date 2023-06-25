@@ -47,3 +47,41 @@ for j in range(m):
     quantity_range_array.append(quantity)
 print(f'sum: {sum_of_range_array}, quantity: {quantity_range_array}')
 # out: sum: [0, 0, 3, 4], quantity: [0, 0, 1, 1]
+
+
+#3. Given two square arrays A and B. Print the one
+# whose trace is smaller (the sum of the elements of the main diagonal)
+def sum_diogonal(A,B):
+    A_diogonal_sum = 0
+    for i in range(len(A)):
+        for j in range(len(A[0])):
+            if j == i:
+                A_diogonal_sum += A[i][j]
+    B_diogonal_sum = 0
+    for i in range(len(B)):
+        for j in range(len(B[0])):
+            if j == i:
+                B_diogonal_sum += B[i][j]
+    return max(A_diogonal_sum, B_diogonal_sum)
+array_2 = [[1, 5, 6, 2], [3, 2, 5, 1], [3, 1, 12, 15], [11, 15, 18, 16]]
+
+print(sum_diogonal(array,array_2))# out: 34
+
+# 4. given 2d array. define:
+# №1.is there any negative number
+# №2.is there same number
+# №3.is there given number A among the elements
+negative_numb = False
+same_numb = set()
+same_numb_bool = False
+A_number = False
+for i in range(n):
+    for j in range(m):
+        if array[i][j] < 0:
+            negative_numb = True
+        if array[i][j] in same_numb:
+            same_numb_bool = True
+        same_numb.add(array[i][j])
+        if array[i][j] == a:
+            A_number = True
+print(f'any negative numbers = {negative_numb} same number = {same_numb_bool} A among the elements = {A_number}')
