@@ -132,8 +132,46 @@ def delete_string_column_max(array):
     print('delete string and column with max number')
     return array
 
-print(delete_string_column_max(array))
+# print(delete_string_column_max(array))
 #out: [[1, 2, 3],
 #       [5, 6, 7],
 #       [9, 10, 11]]
 
+# We call a square matrix A of order n of 0 and 1
+# correct if it does not contain squares 2 2 or more
+# composed only of 0 or 1. Check if A is regular.
+def check_squares(array):
+    for i in range(len(array)):
+        for j in range(len(array[0])):
+            if i + 1 > len(array)-1:
+                return 'correct matrix'
+
+            if j + 1 > len(array[0])-1:
+                continue
+            current_elem = array[i][j]
+            if current_elem == array[i][j+1] and current_elem == array[i+1][j] and current_elem == array[i+1][j+1]:
+                return 'uncorect matrix'
+
+array = [[1,0,1,0],
+         [1,0,0,1],
+         [0,1,0,1],
+         [1,1,0,1]]
+print(check_squares(array))
+
+# in 2 dimensional array find column content only odd num
+
+def find_column_of_odd_num(array):
+    for j in range(len(array[0])):
+        if array[0][j] % 2 != 0:
+            for i in range(len(array)):
+                if array[i][j] % 2 == 0:
+                    break
+            else:
+                return 'odd column finded'
+    return 'odd column not found'
+array = [[2,3,4,7],
+         [5,3,5,8],
+         [6,5,3,1],
+         [8,3,4,5]]
+
+print(find_column_of_odd_num(array))
