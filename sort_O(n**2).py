@@ -1,6 +1,6 @@
 '''sorting by simple selection'''
 
-source_array = [5, 13, 7, 9, 1, 8, 16, 4, 10, 2]
+source_array = [12,3,5,7,9,10]
 def selection_sort(arr):
     n = len(arr)
 
@@ -23,6 +23,7 @@ def exchange_sort(array):
         for j in range(0,n-i-1):
             if array[j] > array[j+1]:
                 array[j],array[j+1] = array[j+1],array[j]
+        break
 
     return array
 # print(exchange_sort(source_array))
@@ -39,3 +40,19 @@ def insertion_sort(array):
         array[j+1] = key
     return array
 # print(insertion_sort(source_array))
+
+
+'''quck sort'''
+
+def quck_sort(array):
+    if len(array)<=1:
+        return array
+
+    num = array[0]
+    left = list(filter(lambda x: x<num,array))
+    center = [i for i in array if i == num ]
+    right = list(filter(lambda x: x>num,array))
+
+    return quck_sort(left) + center + quck_sort(right)
+
+print(quck_sort(source_array))
